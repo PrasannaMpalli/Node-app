@@ -28,7 +28,6 @@ pipeline {
             steps {
                 script {
                         sh '''
-                            git config user.name "PrasannaMpalli"
                             git checkout staging
                             git add Dockerfile
                             git commit -m "Add Dockerfile"
