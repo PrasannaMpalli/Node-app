@@ -41,7 +41,7 @@ pipeline {
                             git checkout staging
                             mv Dockerfile Dockerfile-staging
                             git add Dockerfile-staging
-                            git commit -m "Add Dockerfile"
+                            git commit -m "Add Dockerfile-staging"
                             git push --force origin staging
                         '''
                 }
