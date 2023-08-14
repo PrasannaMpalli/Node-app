@@ -18,6 +18,7 @@ pipeline {
             steps {
                 script {
                     sh 's2i build . nodeshift/centos7-s2i-nodejs:latest mynode1'
+                    sh 'rm -rf upload/src' 
                     sh 's2i build . nodeshift/centos7-s2i-nodejs:latest --as-dockerfile Dockerfile1'
                 }
             }
