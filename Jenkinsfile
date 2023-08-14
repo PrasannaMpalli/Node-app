@@ -30,6 +30,7 @@ pipeline {
                         sh '''
                             git config user.email "jenkins@example.com"
                             git config user.name "Jenkins"
+                            git clean -f
                             git checkout staging
                             mv Dockerfile Dockerfile-staging
                             git add Dockerfile-staging
