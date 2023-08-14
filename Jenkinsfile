@@ -27,7 +27,6 @@ pipeline {
         stage('Push to GitHub Branch') {
             steps {
                 script {
-                    withCredentials([usernamePassword(credentialsId: github, usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                         sh '''
                             git config user.name "PrasannaMpalli"
                             git checkout staging
@@ -35,7 +34,6 @@ pipeline {
                             git commit -m "Add Dockerfile"
                             git push --force origin staging
                         '''
-                    }
                 }
             }
         }
