@@ -17,17 +17,9 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                        sh '''
-             //              git config user.email "jenkins@example.com"
-             //               git config user.name "Jenkins"
-             //               git checkout staging
-                              s2i build . nodeshift/centos7-s2i-nodejs:latest mynode1
-                              rm -rf upload/src
-                              s2i build . nodeshift/centos7-s2i-nodejs:latest --as-dockerfile Dockerfile
-              //              git add Dockerfile
-              //              git commit -m "Add Dockerfile"
-              //              git push --force origin staging
-                         '''
+                         sh s2i build . nodeshift/centos7-s2i-nodejs:latest mynode1
+                         sh rm -rf upload/src
+                         sh s2i build . nodeshift/centos7-s2i-nodejs:latest --as-dockerfile Dockerfile
                 }
             }
         }
