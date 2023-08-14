@@ -30,7 +30,7 @@ pipeline {
                         sh '''
                             git checkout staging
                             git add Dockerfile
-                            git commit -m "Add Dockerfile"
+                            git commit -m "Add Dockerfile1"
                             git push --force origin staging
                         '''
                 }
