@@ -17,8 +17,8 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh 's2i build . nodeshift/centos7-s2i-nodejs:latest mynode'
-                    sh 's2i build . nodeshift/centos7-s2i-nodejs:latest --as-dockerfile Dockerfile'
+                    sh 'sudo s2i build . nodeshift/centos7-s2i-nodejs:latest mynode'
+                    sh 'sudo s2i build . nodeshift/centos7-s2i-nodejs:latest --as-dockerfile Dockerfile'
                 }
             }
         }
