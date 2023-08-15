@@ -30,7 +30,7 @@ pipeline {
                             cd temp
                             git config user.email "jenkins@example.com"
                             git config user.name "Jenkins"
-                            git clone https://github.com/PrasannaMpalli/Node-app.git
+                            git clone git@github.com:PrasannaMpalli/Node-app.git
                             git clean -f
                             cd Node-app
                             git checkout staging
