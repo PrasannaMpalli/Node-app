@@ -29,8 +29,6 @@ pipeline {
                             rm -rf temp && mkdir temp 
                             cd temp
                             git clone https://github.com/PrasannaMpalli/Node-app.git
-                            git config user.email "jenkins@example.com"
-                            git config user.name "Jenkins"
                             git clean -f
                             git checkout staging
                             s2i build . nodeshift/centos7-s2i-nodejs:latest --as-dockerfile Dockerfile
