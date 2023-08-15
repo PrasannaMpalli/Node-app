@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     environment {
+        GIT_SSH_COMMAND = 'ssh -o StrictHostKeyChecking=no'
         GIT_CREDENTIALS = credentials('github')
     }
 
