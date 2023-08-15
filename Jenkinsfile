@@ -25,9 +25,10 @@ pipeline {
         stage('Push to GitHub Branch') {
             steps {
                 script {
-                    withCredentials([usernamePassword(credentialsId: GIT_CREDENTIALS, usernameVariable: 'GIT_USERNAME', passwordVariable: 'GIT_TOKEN')]) {
                     sh '''
-                            git remote set-url origin https://github.com/PrasannaMpalli/Node-app.git
+                            rm -rf temp && mkdir temp 
+                            cd temp
+                            git clone https://github.com/PrasannaMpalli/Node-app.git
                             git config user.email "jenkins@example.com"
                             git config user.name "Jenkins"
                             git clean -f
