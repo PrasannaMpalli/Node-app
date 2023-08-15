@@ -36,7 +36,6 @@ pipeline {
                             git commit -m "Add Dockerfile-staging"
                             git push --force origin staging
                         '''
-                    }   
                 }
             }
        }
