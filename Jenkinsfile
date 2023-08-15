@@ -30,6 +30,7 @@ pipeline {
                             cd temp
                             git clone https://github.com/PrasannaMpalli/Node-app.git
                             git clean -f
+                            cd Node-app
                             git checkout staging
                             s2i build . nodeshift/centos7-s2i-nodejs:latest --as-dockerfile Dockerfile
                             git add Dockerfile
