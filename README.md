@@ -1,5 +1,5 @@
 # Node-app
-#sample s2i Demo
+#sample s2i Demo for RCS Product
 
 # Node.js Sample App
 
