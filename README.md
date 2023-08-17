@@ -1,4 +1,5 @@
 # Node-app
+#sample s2i Demo
 
 # Node.js Sample App
 
