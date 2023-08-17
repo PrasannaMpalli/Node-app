@@ -1,8 +1,8 @@
 FROM nodeshift/centos7-s2i-nodejs:latest
 LABEL "io.openshift.s2i.build.image"="nodeshift/centos7-s2i-nodejs:latest" \
       "io.openshift.s2i.build.commit.author"="Jenkins <jenkins@ip-172-31-93-81.ec2.internal>" \
-      "io.openshift.s2i.build.commit.date"="Thu Aug 17 12:55:37 2023 +0000" \
-      "io.openshift.s2i.build.commit.id"="9fc685593fada583a7affc07308034cdccb6731c" \
+      "io.openshift.s2i.build.commit.date"="Thu Aug 17 12:55:51 2023 +0000" \
+      "io.openshift.s2i.build.commit.id"="6e09bbf5afac1b99c799ae40783013fc10635cf5" \
       "io.openshift.s2i.build.commit.ref"="staging" \
       "io.openshift.s2i.build.commit.message"="Add Dockerfile-staging" \
       "io.openshift.s2i.build.source-location"="/var/lib/jenkins/workspace/s2i-Demo/temp/Node-app/."
