@@ -1,11 +1,11 @@
 FROM nodeshift/centos7-s2i-nodejs:latest
-LABEL "io.openshift.s2i.build.commit.ref"="staging" \
-      "io.openshift.s2i.build.commit.message"="Create procfile" \
-      "io.openshift.s2i.build.source-location"="/var/lib/jenkins/workspace/s2i-Demo/temp/Node-app/." \
-      "io.openshift.s2i.build.image"="nodeshift/centos7-s2i-nodejs:latest" \
-      "io.openshift.s2i.build.commit.author"="PrasannaMpalli <40312221+PrasannaMpalli@users.noreply.github.com>" \
-      "io.openshift.s2i.build.commit.date"="Mon Aug 14 01:44:15 2023 +0530" \
-      "io.openshift.s2i.build.commit.id"="bad91dfaa7ebd9bb690524786043fa2567d559a2"
+LABEL "io.openshift.s2i.build.image"="nodeshift/centos7-s2i-nodejs:latest" \
+      "io.openshift.s2i.build.commit.author"="Jenkins <jenkins@ip-172-31-93-81.ec2.internal>" \
+      "io.openshift.s2i.build.commit.date"="Tue Aug 15 17:05:00 2023 +0000" \
+      "io.openshift.s2i.build.commit.id"="90c3d3ce82c4623e18c1e2958422c0e33f9a15b6" \
+      "io.openshift.s2i.build.commit.ref"="staging" \
+      "io.openshift.s2i.build.commit.message"="Add Dockerfile-staging" \
+      "io.openshift.s2i.build.source-location"="/var/lib/jenkins/workspace/s2i-Demo/temp/Node-app/."
 
 USER root
 # Copying in source code
