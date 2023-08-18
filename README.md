@@ -1,4 +1,3 @@
-
 #Integrating s2i with jenkins
 #sample s2i Demo for RCS Product by lakshmi
 
