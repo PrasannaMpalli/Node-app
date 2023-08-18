@@ -1,11 +1,11 @@
 FROM nodeshift/centos7-s2i-nodejs:latest
-LABEL "io.openshift.s2i.build.commit.author"="Jenkins <jenkins@ip-172-31-93-81.ec2.internal>" \
-      "io.openshift.s2i.build.commit.date"="Fri Aug 18 09:55:44 2023 +0000" \
-      "io.openshift.s2i.build.commit.id"="80ed5ad3430c2eaf30ea02139ef6e02a53cdc6fc" \
+LABEL "io.openshift.s2i.build.commit.id"="d5263996cbedb43b2ac1c92a3c1d061916d60be8" \
       "io.openshift.s2i.build.commit.ref"="staging" \
       "io.openshift.s2i.build.commit.message"="Add Dockerfile-staging" \
       "io.openshift.s2i.build.source-location"="/var/lib/jenkins/workspace/s2i-Demo/temp/Node-app/." \
-      "io.openshift.s2i.build.image"="nodeshift/centos7-s2i-nodejs:latest"
+      "io.openshift.s2i.build.image"="nodeshift/centos7-s2i-nodejs:latest" \
+      "io.openshift.s2i.build.commit.author"="Jenkins <jenkins@ip-172-31-93-81.ec2.internal>" \
+      "io.openshift.s2i.build.commit.date"="Fri Aug 18 09:55:59 2023 +0000"
 
 USER root
 # Copying in source code
