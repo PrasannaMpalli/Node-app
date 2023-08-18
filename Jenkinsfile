@@ -5,7 +5,17 @@ pipeline {
         GIT_SSH_COMMAND = 'ssh -o StrictHostKeyChecking=no'
         GIT_CREDENTIALS = credentials('github')
     }
-
+    triggers {
+        GenericTrigger(
+            genericVariables: [
+                [
+                    key: 'ref',
+                    value: '$.ref'
+                ]
+            ],
+            token: 'Demos2i'
+        )
+    }
     stages {
         stage('Checkout Source Code') {
             steps {
@@ -44,4 +54,9 @@ pipeline {
             }
        }
     }
+}
+def triggerOnMainBranch() {
+    def ref = currentBuild.rawBuild.getAction(hudson.model.CauseAction).getCauses()[0].getShortDescription()
+
+    return ref == 'refs/heads/main'
 }
