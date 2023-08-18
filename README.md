@@ -1,5 +1,5 @@
 #Integrating s2i with jenkins
-#s2i Demo for RCS Product by lakshmi
+#S2i Demo for RCS Product by lakshmi
 
 # Node.js Sample App
 
