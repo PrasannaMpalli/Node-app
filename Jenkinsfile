@@ -15,6 +15,12 @@ pipeline {
         }
 
         stage('Build Docker Image') {
+         when {
+                expression {
+                    // Run the stage only if changes are pushed to the main branch
+                    return env.BRANCH_NAME == 'main'
+                }
+            }
             steps {
                 script {
                          sh 's2i build . nodeshift/centos7-s2i-nodejs:latest mynode1'
@@ -23,6 +29,12 @@ pipeline {
             }
         }
         stage('Push to GitHub Branch') {
+             when {
+                expression {
+                    // Run the stage only if changes are pushed to the main branch
+                    return env.BRANCH_NAME == 'main'
+                }
+            }
             steps {
                 script {
                     sh '''
@@ -43,9 +55,4 @@ pipeline {
             }
        }
     }
-}
-def triggerOnMainBranch() {
-    def ref = currentBuild.rawBuild.getAction(hudson.model.CauseAction).getCauses()[0].getShortDescription()
-
-    return ref == 'refs/heads/main'
 }
