@@ -5,19 +5,14 @@ pipeline {
         GIT_SSH_COMMAND = 'ssh -o StrictHostKeyChecking=no'
         GIT_CREDENTIALS = credentials('github')
     }
-    triggers {
-        GenericTrigger(
-            genericVariables: [
-                [
-                    key: 'ref',
-                    value: '$.ref'
-                ]
-            ],
-            token: 'Demos2i'
-        )
-    }
     stages {
         stage('Checkout Source Code') {
+            when {
+                expression {
+                    // Run the stage only if changes are pushed to the main branch
+                    return env.BRANCH_NAME == 'main'
+                }
+            }
             steps {
                 script {
                     checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/PrasannaMpalli/Node-app.git']]])
