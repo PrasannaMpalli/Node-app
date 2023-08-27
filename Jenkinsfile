@@ -7,12 +7,6 @@ pipeline {
     }
     stages {
         stage('Checkout Source Code') {
-            when {
-                expression {
-                    // Run the stage only if changes are pushed to the main branch
-                    return env.BRANCH_NAME == 'main'
-                }
-            }
             steps {
                 script {
                     checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/PrasannaMpalli/Node-app.git']]])
