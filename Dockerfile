@@ -1,6 +1,6 @@
 FROM nodeshift/centos7-s2i-nodejs:latest
-LABEL "io.openshift.s2i.build.commit.date"="Sun Aug 27 15:22:38 2023 +0000" \
-      "io.openshift.s2i.build.commit.id"="9a9e10d090f385f5c75bfaa2e313abfc8954db32" \
+LABEL "io.openshift.s2i.build.commit.date"="Sun Aug 27 15:23:03 2023 +0000" \
+      "io.openshift.s2i.build.commit.id"="84a0a1ffa11127ea44b1b171da90d1fe344f3e9a" \
       "io.openshift.s2i.build.commit.ref"="staging" \
       "io.openshift.s2i.build.commit.message"="Add Dockerfile-staging" \
       "io.openshift.s2i.build.source-location"="/var/lib/jenkins/workspace/S2i-demo/temp/Node-app/." \
